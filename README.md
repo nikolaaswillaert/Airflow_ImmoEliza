@@ -40,11 +40,11 @@ docker compose up --build
 
 ### :bucket: Connecting the S3 bucket to the app :bucket: <br>
 
-If you are using **minio or AWS**, please make sure you have a **minio server running** in the background (or AWS S3 set-up) and that you create 2 buckets ```"cleandatas3"``` and ```"xgbmodels3"``` inside either AWS or minio (depending on what service you use to host the S3 buckets). See how to set up the connection of the buckets below.
+If you are using **minio or AWS**, please make sure you have a **minio server running** in the background (or AWS S3 set-up) and that you create 2 buckets called ```"cleandatas3"``` and ```"xgbmodels3"``` inside either AWS or minio (depending on what service you use to host the S3 buckets). See how to set up the connection of the buckets below.
 <br>
 <br>
 **Note:** if you plan on using an **AWS S3 bucket**, you will have to add a new connection (ip and port) + AWS login credentials to the airflow config. This can be done when the airflow webserver is running > admin > connections. There will be a minio connection in the list already, but this will not be available for you to access. It's important to set the connection between the S3 bucket and airflow to get this pipeline to work.
-If you plan on using Minio, make sure you fill out the minio log-in credentials in the new airflow connection. <br>
+If you plan on using Minio, make sure you fill out the minio log-in credentials in the new airflow connection. Username in the AWS Access Key ID field and the password in the AWS Secret Access Key field<br>
 
 Once you have the docker container running and the airflow app is active you will need to make sure the S3 bucket connection is set up correctly. Once on the airflow homepage go to Admin > Connections
 
