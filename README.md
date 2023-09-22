@@ -38,7 +38,7 @@ Navigate to the project directory and launch the docker file using the following
 docker compose up --build
 ```
 
-### :bucket: Connecting the S3 bucket to the app <br>
+### Connecting the S3 bucket to the app :bucket: <br>
 
 #### Experiencing Bucket issues?<br>
 If you are using **minio or AWS**, please make sure you have a **minio server running** in the background (or AWS S3 set-up) and that you create 2 buckets ```"cleandatas3"``` and ```"xgbmodels3"``` inside either AWS or minio (depending on what service you use to host the S3 buckets). See how to set up the connection of the buckets below.
