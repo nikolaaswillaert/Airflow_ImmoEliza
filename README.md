@@ -29,7 +29,7 @@ This DAG will launch a Streamlit webpage where you can fill out 12 different fea
 
 Clone the github repository to your local machine:
 ```
-git clone 
+git clone https://github.com/nikolaaswillaert/Airflow_ImmoEliza.git
 ```
 
 Navigate to the project directory and launch the docker file using the following command:
