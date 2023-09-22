@@ -44,7 +44,7 @@ If you are using **minio or AWS**, please make sure you have a **minio server ru
 <br>
 <br>
 **Note:**<br> :basket: if you plan on using an ***AWS S3 bucket***, you will have to add a new connection (ip and port) + AWS login credentials to the airflow config. This can be done when the airflow webserver is running > admin > connections. There will be a minio connection in the list already, but this will not be available for you to access. It's important to set the connection between the S3 bucket and airflow to get this pipeline to work.<br>
-:basket: If you plan on using ***Minio***, make sure you fill out the minio log-in credentials in the new airflow connection. i.e. Minio username in the AWS Access Key ID field and the Minio password in the AWS Secret Access Key field<br>
+:basket: If you plan on using ***Minio***, make sure you fill out the minio log-in credentials in the new airflow connection. i.e. Minio username in the AWS Access Key ID field and the Minio password in the AWS Secret Access Key field. <br>
 
 Once you have the docker container running and the airflow app is active you will need to make sure the S3 bucket connection is set up correctly. Once on the airflow homepage go to Admin > Connections
 
