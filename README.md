@@ -23,8 +23,7 @@ This DAG will scrape the Immo website and create a dataframe. After this the dat
 2) Streamlit Webserver Dag:
 This DAG will launch a Streamlit webpage where you can fill out 12 different features of the property and get a prediction of the price (using the latest model in the S3 bucket).
 
-:bug: Bucket issues:<br>
-If you are using minio or AWS, please make sure you have a minio server running in the background and that you create 2 buckets ```"cleandatas3"``` and ```"xgbmodels3"``` inside of either AWS or minio. See how to set up the connection of the buckets below.
+
 
 ## Installation :hammer_and_wrench:
 
@@ -39,9 +38,12 @@ Navigate to the project directory and launch the docker file using the following
 docker compose up --build
 ```
 
-:bricks: Connecting the S3 bucket to the app <br>
+### :bricks: Connecting the S3 bucket to the app <br>
 
-:bucket: **Note:** if you plan on using an AWS S3 bucket, you will have to add a new connection (ip and port) + AWS login credentials to the airflow config. This can be done when the airflow webserver is running > admin > connections.
+:bug: Bucket issues:<br>
+If you are using **minio or AWS**, please make sure you have a **minio server running** in the background and that you create 2 buckets ```"cleandatas3"``` and ```"xgbmodels3"``` inside either AWS or minio (depending on what service you use to host the S3 buckets). See how to set up the connection of the buckets below.
+<br>
+:bucket: **Note:** if you plan on using an **AWS S3 bucket**, you will have to add a new connection (ip and port) + AWS login credentials to the airflow config. This can be done when the airflow webserver is running > admin > connections.
 There will be a minio connection in the list already, but this will not be available for you to access. It's important to set the connection between the S3 bucket and airflow to get this pipeline to work.
 
 Once you have the docker container running and the airflow app is active you will need to make sure the S3 bucket connection is set up correctly. Once on the airflow homepage go to Admin > Connections
