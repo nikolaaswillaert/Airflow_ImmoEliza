@@ -67,3 +67,7 @@ You will see 2 DAGs on the Airflow > DAGs page. Activate the Scraper DAG and wai
 *Snippet of the streamlit webpage:*
 This application will allow you to calculate the House / Appartment price based on 12 different features of the property (prediction based on the latest trained model)
 ![Alt text](<images/Screenshot from 2023-09-22 10-31-54.png>)
+
+
+### Timeline <br>
+started project on 18/09 ended 22/09
